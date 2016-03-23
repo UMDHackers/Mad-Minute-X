@@ -1,0 +1,11 @@
+$font-stack: Menlo, Monaco, Consolas, "Courier New", monospace;
+$bigger-font: 30px;
+body {
+  font-family: $font-stack;
+}
+.center {
+  text-align: center;
+}
+.header {
+  font-size: $bigger-font;
+}
