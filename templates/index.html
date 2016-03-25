@@ -2,28 +2,77 @@
 <html>
   <head>
     <title>Mad Mintue X</title>
-
+    <link rel = "stylesheet" href = "static/Skeleton-2.0.4/css/skeleton.css">
+    <link rel = "stylesheet" href = "static/Skeleton-2.0.4/css/normalize.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <link rel="stylesheet" href = "static/main.css">
 
   </head>
   <body>
+    {% set levels = ["Easy","Medium","Hard"] %}
+
     <div class = "center header">
       <h1>Mad Mintue X</h1>
     </div>
-    <p class = "center">Remeber that <i><a href = "static/img.jpg">Mad Mintues</a></i> you had to in
+    <p class = "center words">Remeber that <i><a href = "static/img.jpg">Mad Mintues</a></i> you had to in
        elementary school? 60 problems in 60 seconds GO!</p>
-       <button>
-         Addtition
-       </button>
-       <button>
-         Subtraction
-       </button>
-       <button>
-         Mulitplication
-       </button>
-       <button>
-         Division
-       </button>
+    <div class = "vertical">
+      <ul>
+        <li>
+            <button class = "addBtn">
+             Addition
+            </button>
+            <div id = "add_level">
+              <ul class = "inner">
+                {% for lvl in levels %}
+                  <li>{{lvl}}</li>
+                {% endfor %}
+              </ul>
+            </div>
+         </li>
+         <li>
+           <button class = "subBtn">
+             Subtraction
+           </button>
+           <div id = "sub_level">
+             <ul class = "inner">
+               {% for lvl in levels %}
+                 <li>{{lvl}}</li>
+               {% endfor %}
+             </ul>
+           </div>
+         </li>
+         <li>
+           <button class = "mulBtn">
+             Mulitplication
+           </button>
+           <div id = "mul_level">
+             <ul class = "inner">
+               {% for lvl in levels %}
+                 <li>{{lvl}}</li>
+               {% endfor %}
+             </ul>
+           </div>
+         </li>
+         <li>
+           <button class = "divBtn">
+             Division
+           </button>
+           <div id = "div_level">
+             <ul class = "inner">
+               {% for lvl in levels %}
+                 <li>{{lvl}}</li>
+               {% endfor %}
+             </ul>
+           </div>
+         </li>
+         <li>
+           <button class = "calcBtn">
+             Calculus
+           </button>
+         </li>
+       <ul>
+     </div>
 
   </body>
 </html>

@@ -1,10 +1,26 @@
 body {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace; }
 
+.vertical li {
+  display: block;
+  text-align: center; }
+.vertical button {
+  font-size: 20px;
+  width: 500px; }
+
+.words {
+  padding-bottom: 40px; }
+
 .center {
   text-align: center; }
 
 .header {
   font-size: 30px; }
+
+.inner {
+  padding-right: 10px; }
+  .inner li {
+    display: inline;
+    padding-right: 10px; }
 
 /*# sourceMappingURL=main.css.map */

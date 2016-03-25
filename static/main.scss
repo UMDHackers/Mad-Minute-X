@@ -1,11 +1,39 @@
 $font-stack: Menlo, Monaco, Consolas, "Courier New", monospace;
 $bigger-font: 30px;
+$smaller-font: 20px;
+$smaller-text: 10px;
+$width: 500px;
+$top: 40px;
 body {
   font-family: $font-stack;
 }
+.vertical {
+  li {
+    display: block;
+
+    text-align: center;
+  }
+  button {
+    font-size: $smaller-font;
+
+    width: $width;
+  }
+
+}
+.words {
+  padding-bottom: $top;
+}
 .center {
   text-align: center;
+
 }
 .header {
   font-size: $bigger-font;
+}
+.inner{
+  li{
+    display: inline;
+    padding-right: 10px;
+  }
+  padding-right:10px;
 }
