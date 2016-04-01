@@ -25,9 +25,9 @@
             </button>
             <div class = "inner" id = "add_level">
               <ul >
-                <li>Easy</li>
-                <li>Medium</li>
-                <li>Hard</li>
+                <li><a href = {{ url_for('easy', section = 'add')}}>Easy</a></li>
+                <li><a href = {{ url_for('medium', section = 'add')}}>Medium</a></li>
+                <li><a href = {{ url_for('hard', section = 'add')}}>Hard</a></li>
               </ul>
             </div>
          </li>
@@ -37,9 +37,9 @@
            </button>
            <div class = "inner" id = "sub_level">
              <ul >
-               <li>Easy</li>
-               <li>Medium</li>
-               <li>Hard</li>
+               <li><a href = {{ url_for('easy', section = 'subtract')}}>Easy</a></li>
+               <li><a href = {{ url_for('medium', section = 'subtract')}}>Medium</a></li>
+               <li><a href = {{ url_for('hard', section = 'subtract')}}>Hard</a></li>
              </ul>
            </div>
          </li>
@@ -49,9 +49,9 @@
            </button>
            <div class = "inner" id = "mul_level">
              <ul>
-               <li>Easy</li>
-               <li>Medium</li>
-               <li>Hard</li>
+               <li><a href = {{ url_for('easy', section = 'mulitplication')}}>Easy</a></li>
+               <li><a href = {{ url_for('medium', section = 'mulitplication')}}>Medium</a></li>
+               <li><a href = {{ url_for('hard', section = 'mulitplication')}}>Hard</a></li>
              </ul>
            </div>
          </li>
@@ -61,9 +61,9 @@
            </button>
            <div class = "inner" id = "div_level">
              <ul>
-               <li>Easy</li>
-               <li>Medium</li>
-               <li>Hard</li>
+               <li><a href = {{ url_for('easy', section = 'division')}}>Easy</a></li>
+               <li><a href = {{ url_for('medium', section = 'division')}}>Medium</a></li>
+               <li><a href = {{ url_for('hard', section = 'division')}}>Hard</a></li>
              </ul>
            </div>
          </li>

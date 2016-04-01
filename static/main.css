@@ -22,12 +22,14 @@ body {
   padding-top: 2px;
   padding-right: 10px;
   background-color: grey; }
+  .inner a {
+    text-decoration: none;
+    color: white; }
   .inner li {
     display: inline;
     padding-right: 10px;
     font-size: 16px; }
-  .inner li:hover {
-    color: black;
-    cursor: pointer; }
+  .inner a:hover {
+    color: gold; }
 
 /*# sourceMappingURL=main.css.map */
