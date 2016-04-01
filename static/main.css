@@ -18,15 +18,14 @@ body {
   font-size: 30px; }
 
 .inner {
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding-bottom: 2px;
+  padding-top: 2px;
   padding-right: 10px;
   background-color: grey; }
   .inner li {
     display: inline;
     padding-right: 10px;
-    font-size: 16px;
-    color: white; }
+    font-size: 16px; }
   .inner li:hover {
     color: black;
     cursor: pointer; }

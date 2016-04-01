@@ -6,7 +6,7 @@
     <link rel = "stylesheet" href = "static/Skeleton-2.0.4/css/normalize.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src = "{{ url_for('static', filename='main.js') }}"></script>
-    <link rel="stylesheet" href = "url_for('static', filename='main.css')">
+    <link rel="stylesheet" href = "{{url_for('static', filename='main.css')}}">
 
   </head>
   <body>
@@ -23,8 +23,8 @@
             <button class = "addBtn">
              Addition
             </button>
-            <div id = "add_level">
-              <ul class = "inner">
+            <div class = "inner" id = "add_level">
+              <ul >
                 <li>Easy</li>
                 <li>Medium</li>
                 <li>Hard</li>
@@ -35,8 +35,8 @@
            <button class = "subBtn">
              Subtraction
            </button>
-           <div id = "sub_level">
-             <ul class = "inner">
+           <div class = "inner" id = "sub_level">
+             <ul >
                <li>Easy</li>
                <li>Medium</li>
                <li>Hard</li>
@@ -47,8 +47,8 @@
            <button class = "mulBtn">
              Mulitplication
            </button>
-           <div id = "mul_level">
-             <ul class = "inner">
+           <div class = "inner" id = "mul_level">
+             <ul>
                <li>Easy</li>
                <li>Medium</li>
                <li>Hard</li>
@@ -59,8 +59,8 @@
            <button class = "divBtn">
              Division
            </button>
-           <div id = "div_level">
-             <ul class = "inner">
+           <div class = "inner" id = "div_level">
+             <ul>
                <li>Easy</li>
                <li>Medium</li>
                <li>Hard</li>
