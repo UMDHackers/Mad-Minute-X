@@ -34,6 +34,15 @@ body {
   li{
     display: inline;
     padding-right: 10px;
+    font-size: 16px;
+    color: white;
   }
+  li:hover {
+    color: black;
+    cursor: pointer;
+  }
+  padding-bottom:10px;
+  padding-top:10px;
   padding-right:10px;
+  background-color: grey;
 }
