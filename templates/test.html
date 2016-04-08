@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="testApp">
   <head>
-
+    <script src = "../static/angular.min.js">
+    </script>
+    <script src="../static/controllers.js"></script>
   </head>
-  <body>
-    {% if section and level %}
-      <h1>section {{ section }} level {{level}}!</h1>
-    {% else %}
-      <h1>Something went wrong</h1>
-    {% endif %}
+  <body ng-controller = "ProblemsListCtrl">
+    <div ng-reapet = "problem in problems" class = "problems_list">
+      {% if section == "division" %}
+        <div class = "divison">
+
+        </div>
+      {% else %}
+        <div class = "top_down">
+          
+        </div>
+      {% endif %}
+
+    </div>
   </body>
 
 
