@@ -1,0 +1,85 @@
+<!--
+{% problems = [] %}
+    {% if section == "division" %}
+      <div ng-repeat = "problem in problems" class = "problems_list">
+        <div class = "divison">
+          {% raw %}
+            {{problem[0]}}
+          {% endraw %}
+        </div>
+      </div>
+    {% else %}
+      <div ng-repeat = "problem in problems" class = "problems_list">
+        <div class = "top_down">
+          {% raw %}
+            <span id = "top_three">{{problem[0]}}</span><br>
+            <span id = "bottom_three">+{{problem[1]}}</span><br>
+
+          {% endraw %}
+          <input name = "ans"/> <br>
+        </div>
+      </div>
+    {% endif %}
+
+  {%first = 0%}
+  {%second = 0%}
+  {%solu = 0%}
+  {% if section == "division" %}
+    {% if level == "easy" %}
+      {% for i in range(60) %}
+        {}
+        {%problems[i] = [, second, solu]%}
+      {% endfor %}
+    {% elif level == "medium"}
+      {% for i in range(60) %}
+
+      {% endfor %}
+    {% else %}
+      {% for i in range(60) %}
+
+      {% endfor %}
+    {% endif %}
+  {% elif section == "add" %}
+    {% if level == "easy" %}
+      {% for i in range(60) %}
+
+      {% endfor %}
+    {% elif level == "medium"}
+      {% for i in range(60) %}
+
+      {% endfor %}
+    {% else %}
+      {% for i in range(60) %}
+
+      {% endfor %}
+    {% endif %}
+  {% elif section == "mulitplication" %}
+    {% if level == "easy" %}
+      {% for i in range(60) %}
+
+      {% endfor %}
+    {% elif level == "medium"}
+      {% for i in range(60) %}
+
+      {% endfor %}
+    {% else %}
+      {% for i in range(60) %}
+
+      {% endfor %}
+    {% endif %}
+  {% elif section == "subtract" %}
+    {% if level == "easy" %}
+      {% for i in range(60) %}
+
+      {% endfor %}
+    {% elif level == "medium"}
+      {% for i in range(60) %}
+
+      {% endfor %}
+    {% else %}
+      {% for i in range(60) %}
+
+      {% endfor %}
+    {% endif %}
+  {% endif %}
+-->

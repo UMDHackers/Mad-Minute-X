@@ -9,34 +9,13 @@
     <link rel="stylesheet" href = "{{url_for('static', filename='test.css')}}">
   </head>
   <body ng-controller = "ProblemsListCtrl">
-    <div class="container header">
-      <header class = "row">
-        <h1 class = "six columns"> Sixty {{section}} facts </h1>
-        <h1 class = "six columns"> The Mad Mintue </h1>
-      </header>
-    </div>
-      {% if section == "division" %}
-        <div ng-repeat = "problem in problems" class = "problems_list">
-          <div class = "divison">
-            {% raw %}
-              {{problem[0]}}
-            {% endraw %}
-          </div>
-        </div>
-      {% else %}
-        <div ng-repeat = "problem in problems" class = "problems_list">
-          <div class = "top_down">
-            {% raw %}
-              <span id = "top_three">{{problem[0]}}</span><br>
-              <span id = "bottom_three">+{{problem[1]}}</span><br>
-              ---------------<br>
-            {% endraw %}
-            <input name = "ans"/> <br>
-          </div>
-        </div>
-      {% endif %}
 
-    </div>
+    <header class = "row">
+      <h1 class = "center"> Sixty {{section}} facts | The Mad Mintue</h1>
+    </header>
+
+
+
   </body>
 
 

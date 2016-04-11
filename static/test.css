@@ -1,5 +1,10 @@
-.header {
-  border-style: solid;
-  border-width: 5px; }
+.center {
+  text-align: center; }
+
+header {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace; }
+
+.top_down {
+  display: inline; }
 
 /*# sourceMappingURL=test.css.map */
