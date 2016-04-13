@@ -83,3 +83,30 @@
     {% endif %}
   {% endif %}
 -->
+<div class = "one column prob">
+  <span>&nbsp;&nbsp;1</span><br>
+  <span class = "lower_number">+1</span>
+  <input type="text"  size = "5">
+</div>
+<div class = "one column prob">
+  <span>&nbsp;&nbsp;1</span><br>
+  <span class = "lower_number">+1</span>
+  <input type="text"  size = "5">
+</div>
+<div class = "one column prob">
+  <span>&nbsp;&nbsp;1</span><br>
+  <span class = "lower_number">+1</span>
+  <input type="text"  size = "5">
+</div>
+<div class = "one column prob">
+  <span>&nbsp;&nbsp;1</span><br>
+  <span class = "lower_number">+1</span>
+  <input type="text"  size = "5">
+</div>
+<div class = "one column prob">
+  <span>&nbsp;&nbsp;1</span><br>
+  <span class = "lower_number">+1</span>
+  <input type="text"  size = "5">
+
+
+  </div>

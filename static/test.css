@@ -7,4 +7,25 @@ header {
 .top_down {
   display: inline; }
 
+.lower_number {
+  border-bottom: thin solid #000000; }
+
+span {
+  font-size: 30px; }
+
+.prob {
+  padding-left: 90px; }
+
+.prob_list {
+  padding-left: 20px; }
+
+.loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url("timer.gif") 50% 50% no-repeat #f9f9f9; }
+
 /*# sourceMappingURL=test.css.map */

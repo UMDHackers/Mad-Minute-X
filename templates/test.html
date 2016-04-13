@@ -3,19 +3,45 @@
   <head>
     <link rel = "stylesheet" href = "../static/Skeleton-2.0.4/css/skeleton.css">
     <link rel = "stylesheet" href = "../static/Skeleton-2.0.4/css/normalize.css">
-    <script src = "../static/angular.min.js">
-    </script>
-    <script src="../static/controllers.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
     <link rel="stylesheet" href = "{{url_for('static', filename='test.css')}}">
   </head>
   <body ng-controller = "ProblemsListCtrl">
-
+    <div class = "loader"></div>
     <header class = "row">
       <h1 class = "center"> Sixty {{section}} facts | The Mad Mintue</h1>
+      <hr>
     </header>
+    {%set sign = ''%}
+    {%if section == "mulitplication"%}
+      {%set sign = 'x'%}
+    {%elif section == "add"%}
+      {%set sign = '+'%}
+    {%elif section == "subtract"%}
+      {%set sign = '-'%}
+    {%else%}
+      {%set sign = '/'%}
+    {%endif%}
+    <div class="container">
+
+      {%for i in range(10)%}
+        <div class = "row prob_list">
+          {% for x in range(6) %}
+            <div class = "one column prob">
+              <span>&nbsp;&nbsp;{{problems[(i + 1)*x][0]}}</span><br>
+              <span class = "lower_number">{{sign}}{{problems[(i + 1)*x][1]}}</span>
+              <input type="text"  size = "5">
+            </div>
+          {% endfor %}
+        </div>
+        {%endfor%}
+      </div>
 
 
 
+
+  <script src = "{{ url_for('static', filename='test.js') }}"></script>
   </body>
 
 
