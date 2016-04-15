@@ -4,11 +4,12 @@
     <link rel = "stylesheet" href = "../static/Skeleton-2.0.4/css/skeleton.css">
     <link rel = "stylesheet" href = "../static/Skeleton-2.0.4/css/normalize.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-
+    <title>{{section}} - {{level}}</title>
     <link rel="stylesheet" href = "{{url_for('static', filename='test.css')}}">
   </head>
   <body ng-controller = "ProblemsListCtrl">
-    <div class = "loader"></div>
+    <!-- <div class = "loader"></div> -->
+    {% set count = [0] %}
     <header class = "row">
       <h1 class = "center"> Sixty {{section}} facts | The Mad Mintue</h1>
       <hr>
@@ -24,14 +25,18 @@
       {%set sign = '/'%}
     {%endif%}
     <div class="container">
-
+      {% set num = 0 %}
       {%for i in range(10)%}
         <div class = "row prob_list">
           {% for x in range(6) %}
             <div class = "one column prob">
-              <span>&nbsp;&nbsp;{{problems[(i + 1)*x][0]}}</span><br>
-              <span class = "lower_number">{{sign}}{{problems[(i + 1)*x][1]}}</span>
-              <input type="text"  size = "5">
+              {% set num = count[-1] %}
+              {% if count.append(count.pop() + 1) %}
+
+              {% endif %}
+              <span>&nbsp;&nbsp;{{problems[num][0]}}</span><br>
+              <span class = "lower_number">{{sign}}{{problems[num][1]}}</span>
+              <input type="text"  id = "problem{{num}}" size = "5" autofocus>
             </div>
           {% endfor %}
         </div>
@@ -41,7 +46,30 @@
 
 
 
-  <script src = "{{ url_for('static', filename='test.js') }}"></script>
+  <!-- <script src = "{{ url_for('static', filename='test.js') }}"></script> -->
+  <script>
+    var current_value = 0, answers = new Array(), done = false;
+    var correct = 0, count = 0;
+
+    $(document).keypress(function(e) {
+      if(e.which == 13 ) {
+          if(current_value == 6) {
+            {% for pro in problems %}
+              if(answers[count] == {{pro[2]}}) {
+                count++;
+              }
+            {% endfor %}
+            // console.log("right number " + count);
+            window.open("","_self");
+          } else {
+            answers[current_value] = $("#problem" + current_value).val();
+            console.log(answers[current_value]);
+            current_value++;
+            $("#problem" + current_value).focus();
+          }
+        }
+    });
+  </script>
   </body>
 
 
