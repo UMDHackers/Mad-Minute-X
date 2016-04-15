@@ -93,8 +93,9 @@ def hard(section):
             solu = first * second
             problems.append([first, second, solu])
     return render_template('test.html', section = section, level = "hard", problems = problems)
-# @app.route("/results")
-# def results():
-#     return render_template('result.html', correct = correct)
+@app.route("/results", methods = [POST])
+def results():
+    results = request.form['score'];
+    return render_template('result.html', results = results)
 if __name__ == "__main__":
     app.run(debug=True)

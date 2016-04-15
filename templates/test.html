@@ -42,7 +42,9 @@
         </div>
         {%endfor%}
       </div>
-
+  <form method="post" action="" id ="form" display="hidden">
+    <input type = "hidden" name = "score" id = "score">
+  </form>
 
 
 
@@ -59,8 +61,10 @@
                 count++;
               }
             {% endfor %}
+            $("#score").value() = count;
+            $("#form").submit();
             // console.log("right number " + count);
-            window.open("","_self");
+
           } else {
             answers[current_value] = $("#problem" + current_value).val();
             console.log(answers[current_value]);
