@@ -1,6 +1,7 @@
 h4 {
   padding-bottom: 90px;
-  color: green; }
+  color: green;
+  text-align: center; }
 
 a {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -8,5 +9,8 @@ a {
   padding-right: 10px;
   text-decoration: none;
   padding-left: 40px; }
+
+.footer {
+  text-align: center; }
 
 /*# sourceMappingURL=results.css.map */

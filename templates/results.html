@@ -9,15 +9,18 @@
     <link rel="stylesheet" href = "{{url_for('static', filename='results.css')}}">
   </head>
   <body>
-    <h1 style="text-align:center">Your Score!</h1>
+    <h1 style="text-align:center">Your Score:</h1>
     <hr>
-    <h4 style="text-align:center; color=green;">You got {{results}} out of 60 questions in 60 seconds, Good Job!<h4>
-    <div class = "container" style="text-align:center">
-
-        <div class = "six column">
-          <a href = "/">Try Again?</a>
-          <a href = "https://github.com/UMDHackers/Mad-Minute-X/issues" target="_blank">Found an issue?</a>
-        </div>
+    {% if results == "-1" %}
+      <h4>You ran out of time!</h4>
+    {% else %}
+      <h4>You got {{results}} out of 60 questions in 60 seconds, Good Job!</h4>
+    {% endif %}
+    <div class = "container footer">
+      <div class = "six column">
+        <a href = "/">Try Again?</a>
+        <a href = "https://github.com/UMDHackers/Mad-Minute-X/issues" target="_blank">Found an issue?</a>
+      </div>
     </div>
   </body>
 </html>
