@@ -1,4 +1,5 @@
-from flask import Flask, url_for, request, render_template
+import os
+from flask import Flask, url_for, request, render_template, send_from_directory
 from random import randint
 app = Flask(__name__)
 problems = []
@@ -9,6 +10,9 @@ solu = 0
 @app.route("/")
 def index():
     return render_template('index.html')
+# @app.route('/favicon.ico')
+# def favicon():
+#     return send_from_directory(os.path.join(app.root_path, 'static'),'favicon.ico', mimetype='image/vnd.microsoft.icon')
 @app.route("/<section>/easy")
 def easy(section):
     problems = []
