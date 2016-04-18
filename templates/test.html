@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="testApp">
+<html >
   <head>
     <link rel = "stylesheet" href = "../static/Skeleton-2.0.4/css/skeleton.css">
     <link rel = "stylesheet" href = "../static/Skeleton-2.0.4/css/normalize.css">
@@ -7,7 +7,7 @@
     <title>{{section}} - {{level}}</title>
     <link rel="stylesheet" href = "{{url_for('static', filename='test.css')}}">
   </head>
-  <body ng-controller = "ProblemsListCtrl">
+  <body>
     <!-- <div class = "loader"></div> -->
     {% set count = [0] %}
     <header class = "row">
@@ -42,7 +42,7 @@
         </div>
         {%endfor%}
       </div>
-  <form method="post" action="" id ="form" display="hidden">
+  <form method="post" action="/results" id ="form" display="hidden">
     <input type = "hidden" name = "score" id = "score">
   </form>
 
@@ -55,23 +55,25 @@
 
     $(document).keypress(function(e) {
       if(e.which == 13 ) {
-          if(current_value == 6) {
-            {% for pro in problems %}
-              if(answers[count] == {{pro[2]}}) {
-                count++;
-              }
-            {% endfor %}
-            $("#score").value() = count;
-            $("#form").submit();
-            // console.log("right number " + count);
+        answers[current_value] = $("#problem" + current_value).val();
+        console.log(answers[current_value]);
+        current_value++;
+        if(current_value == 60) {
+          {% for pro in problems %}
+            if(answers[count] == {{pro[2]}}) {
+              correct++;
+            }
+            count++;
 
-          } else {
-            answers[current_value] = $("#problem" + current_value).val();
-            console.log(answers[current_value]);
-            current_value++;
-            $("#problem" + current_value).focus();
-          }
+          {% endfor %}
+          $("#score").val(correct);
+          $("#form").submit();
+          // console.log("right number " + count);
+
         }
+        $("#problem" + current_value).focus();
+      }
+
     });
   </script>
   </body>
